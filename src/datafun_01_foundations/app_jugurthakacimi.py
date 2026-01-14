@@ -55,19 +55,14 @@ MY_ANALYTICS_COMPANY: Final[str] = "DataFun Analytics"
 MY_EMPLOYEE_COUNT: Final[int] = 150
 
 # See the other file for examples.
-# TODO: Declare and initialize a string (str) variable of your choice below:
 MY_NAME: Final[str] = "Jugurtha"
 
-# TODO: Declare and initialize an integer (int) variable of your choice below:
 MY_AGE: Final[int] = 27
 
-# TODO: Declare and initialize a float (float) variable of your choice below:
 MY_GPA: Final[float] = 3.95
 
-# TODO: Declare and initialize a boolean (bool) variable of your choice (True or False) below:
 IS_ACTIVE: Final[bool] = True
 
-# TODO: Declare and initialize a list of strings (list[str]) variable of your choice below:
 # REQ: Strings must be in quotes and items are separated by commas,
 # REQ: The list is wrapped in square brackets. (See the other file for examples.)
 MY_PEERS: Final[list[str]] = ["Micheal", "Jordan", "Sarah"]
@@ -82,10 +77,6 @@ def get_summary() -> str:
 
     Returns: - a formatted multi-line string (starts with f and wrapped in triple quotes).
     """
-    # TODO: Create and return a multi-line f-string (triple-quoted) that includes
-    # all of the global variables you declared above, each on its own line,
-    # labeled clearly with descriptive text.
-    # See the other file for an example. Remember to start the string with an f!
     summary: str = f"""
     Custom Information:
         Company name: {MY_ANALYTICS_COMPANY}
@@ -120,7 +111,6 @@ def get_statistics() -> str:
     # Initialize sample data - snowfall measurements in inches.
     # REQ: Vary ONE of the sample data values.
     # See how the statistics change when you do.
-    # TODO: Change one of the values in the list below.
     snowfall_inches: list[float] = [2.5, 3.5, 4.5, 5.5, 7.5]
 
     # Calculate descriptive statistics below - see other file for examples.
@@ -131,14 +121,12 @@ def get_statistics() -> str:
     # Example : Calculate count of measurements.
     count: int = len(snowfall_inches)
 
-    # TODO: Calculate minimum and maximum snowfall (see other file for examples).
     minimum: float = min(snowfall_inches) if count > 0 else 0.0
     maximum: float = max(snowfall_inches) if count > 0 else 0.0
 
     # Use the statistics module to calculate average.
     average: float = statistics.mean(snowfall_inches) if count > 0 else 0.0
 
-    # TODO: Use the statistics module to calculate standard deviation below:
     std_dev: float = statistics.stdev(snowfall_inches) if count > 1 else 0.0
 
     # Build a formatted multi-line string using f and triple quotes.
